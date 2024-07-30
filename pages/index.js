@@ -1,20 +1,20 @@
-import { AllPost } from "@/Components/AllPost";
-import { FirstHeader } from "@/Components/FirstHeader";
-import { Footer } from "@/Components/Footer";
-import { MobileVersion } from "@/Components/MobileVersion";
-import { Section } from "@/Components/Section";
+import { AllPost } from "@/components/AllPost";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { Banner } from "@/components/Banner";
+import { TrendingList } from "@/components/treding/TrendingList";
 
 export default function Home() {
   return (
-    <main className="w-[768px] m-auto md:w-[1280px]">
-      <div className=" m-auto ">
-        <MobileVersion />
-        <FirstHeader />
-        <Section />
+    <main>
+      <Header />
+      <div className="max-w-[1280px] mx-auto">
+        <Banner />
+        <TrendingList />
         <AllPost />
-        <Footer />
-
       </div>
+      <Footer />
+      {/* <MobileVersion /> */}
     </main>
   );
 }
