@@ -1,5 +1,23 @@
 import Image from "next/image";
 import { CiSearch } from "react-icons/ci";
+import Link from "next/link"
+
+// export function SecondPage() {
+//   const navigations = [
+//     {
+//       name: "Blog",
+//       link: "/Blog"
+//     }
+//   ]
+
+//   return (
+//     <div>
+//       <Link key={navigations} href={navigations} className="text-slate-500">
+//       gasfsafafa
+//       </Link>
+//     </div>
+//   )
+// }
 
 export function Header() {
   return (

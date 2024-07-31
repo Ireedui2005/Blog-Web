@@ -1,17 +1,24 @@
-import { AllPost } from "@/components/AllPost";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { Banner } from "@/components/Banner";
-import { TrendingList } from "@/components/treding/TrendingList";
+import { AllPost } from "@/Components/AllPost";
+import { Banner } from "@/Components/Banner";
+import { Contact } from "@/Components/Contact";
+import { Footer } from "@/Components/Footer";
+import { Header } from "@/Components/Header";
+import { NotFound } from "@/Components/NotFound";
+import { SecondPage } from "@/Components/SecondPage";
+import { TrendingList } from "@/Components/treding/TrendingList";
+
 
 export default function Home() {
   return (
     <main>
       <Header />
       <div className="max-w-[1280px] mx-auto">
-        <Banner />
+        {/* <SecondPage /> */}
+        {/* <Banner />
         <TrendingList />
-        <AllPost />
+        <AllPost /> */}
+        {/* <Contact /> */}
+        <NotFound />
       </div>
       <Footer />
       {/* <MobileVersion /> */}
