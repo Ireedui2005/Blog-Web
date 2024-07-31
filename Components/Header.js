@@ -1,23 +1,6 @@
 import Image from "next/image";
 import { CiSearch } from "react-icons/ci";
-import Link from "next/link"
-
-// export function SecondPage() {
-//   const navigations = [
-//     {
-//       name: "Blog",
-//       link: "/Blog"
-//     }
-//   ]
-
-//   return (
-//     <div>
-//       <Link key={navigations} href={navigations} className="text-slate-500">
-//       gasfsafafa
-//       </Link>
-//     </div>
-//   )
-// }
+import Link from "next/link";
 
 export function Header() {
   return (
@@ -30,9 +13,15 @@ export function Header() {
         <h1 className="text-2xl ml-[5px] text-[#141624] mt-[5px]">Blog</h1>
       </div>
       <div className="flex">
-        <button className="text-[#3B3C4A] text-base">Home</button>
-        <button className="text-[#3B3C4A] ml-[40px] text-base">Blog</button>
-        <button className="text-[#3B3C4A] ml-[40px] text-base">Contact</button>
+        <Link href="/" className="text-[#3B3C4A] text-base">
+          Home
+        </Link>
+        <Link href="/blog" className="text-[#3B3C4A] ml-[40px] text-base">
+          Blog
+        </Link>
+        <Link href="/contact" className="text-[#3B3C4A] ml-[40px] text-base">
+          Contact
+        </Link>
       </div>
       <div className="flex bg-[#F4F4F5] items-center relative h-9 w-[160px] rounded-[5px] pl-6 pr-">
         <input placeholder="Search" className="bg-[transparent] w-full" />
