@@ -1,3 +1,5 @@
+import Image from 'next/image'
+import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 
 const tags = [
@@ -9,24 +11,25 @@ const tags = [
     { value: "Branding", name: "Branding" },
     { value: "View All", name: "View All" }
 ]
-const [selectedCategory, setSelectedCategory] = useState("all")
-const [articles, setArticles] = useState([])
-const [loading, setloading] = useState(false)
-
-async function LoadArticles() {
-    setloading(true)
-
-    const response = await fetch(`https://dev.to/api/articles?username=paul_freeman&tag=${selectedCategory}`);
-    const tagArticles = await response.json();
-    setArticles(tagArticles);
-
-    setloading(false)
-}
-useEffect(() => {
-    LoadArticles();
-}, [selectedCategory]);
 
 function Select() {
+    const [selectedCategory, setSelectedCategory] = useState()
+    const [articles, setArticles] = useState([])
+    const [loading, setloading] = useState(false)
+
+    async function LoadArticles() {
+        setloading(true)
+
+        const response = await fetch(`https://dev.to/api/articles?username=paul_freeman&tag=${selectedCategory}`);
+        const tagArticles = await response.json();
+        setArticles(tagArticles);
+
+        setloading(false)
+    }
+    useEffect(() => {
+        LoadArticles();
+    }, [selectedCategory]);
+
     return (
         <div>
             <div className="text-2xl md:block w-[768px] text-[#181A2A] font-bold">
