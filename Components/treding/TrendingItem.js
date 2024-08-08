@@ -1,4 +1,4 @@
-export const TrendingItem = ({ imageUrl, title }) => {
+export function TrendingItem({ imageUrl, title }) {
   return (
     <div
       style={{ backgroundImage: `url(${imageUrl})` }}

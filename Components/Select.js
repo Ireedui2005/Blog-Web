@@ -3,16 +3,16 @@ import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 
 const tags = [
-    { value: "all", name: "beginners" },
-    { value: "Design", name: "JavaScript" },
-    { value: "Travel", name: "frontend" },
-    { value: "Fashion", name: "webdev" },
+    { value: "beginners", name: "All" },
+    { value: "JavaScript", name: "Design" },
+    { value: "frontend", name: "Travel" },
+    { value: "webdev", name: "Fashion" },
     { value: "Technology", name: "Technology" },
     { value: "Branding", name: "Branding" },
     { value: "View All", name: "View All" }
 ]
 
-function Select() {
+export function Select() {
     const [selectedCategory, setSelectedCategory] = useState()
     const [articles, setArticles] = useState([])
     const [loading, setloading] = useState(false)
@@ -37,10 +37,10 @@ function Select() {
             </div>
             <div className='flex gap-4'>
                 {tags.map((tag) => (
-                    <div key={tag.value} className={`cursor-pointer hover:text-orange-500 ${selectedCategory === tag.value ? "hover:text-orange-600" : ""}`} onClick={() => setSelectedCategory(tag.value)}>{tag.name}</div>
+                    <div key={tag.value} className={`cursor-pointer hover:text-orange-500 mt-[15px] ${selectedCategory === tag.value ? "hover:text-orange-600" : ""}`} onClick={() => setSelectedCategory(tag.value)}>{tag.name}</div>
                 ))}
             </div>
-            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 mt-[32px]">
                 {articles.map((item) => (
                     <div
                         key={item.id}
@@ -69,15 +69,8 @@ function Select() {
                 ))}
             </div>
         </div>
-
     )
 }
-
-export default Select
-
-
-
-
 
 
 

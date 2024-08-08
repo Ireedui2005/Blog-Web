@@ -1,7 +1,6 @@
 import { Blog } from "@/Components/Blog";
 
-
-const BlogPage = () => {
+export function BlogPage() {
   return (
     <main className="max-w-[800px] mx-auto">
       <Blog
@@ -12,5 +11,4 @@ const BlogPage = () => {
     </main>
   );
 };
-
-export default BlogPage;
+export default BlogPage

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Select from "./Select";
+import { Select } from "./Select";
 
 export function AllPost() {
   const [articles, setArticles] = useState([]);
@@ -17,7 +17,7 @@ export function AllPost() {
       });
   }, []);
 
-  useEffect(() =>{
+  useEffect(() => {
     LoadMore()
   }, [])
 
