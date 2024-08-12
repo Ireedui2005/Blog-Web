@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Select } from "./Select";
+import Select from "./Select";
 
 export function AllPost() {
   const [articles, setArticles] = useState([]);
@@ -18,12 +18,13 @@ export function AllPost() {
   }, []);
 
   useEffect(() => {
-    LoadMore()
-  }, [])
+    LoadMore();
+  }, []);
 
   function LoadMore() {
     fetch(
-      `https://dev.to/api/articles?username=paul_freeman&page= ${page + 1
+      `https://dev.to/api/articles?username=paul_freeman&page= ${
+        page + 1
       }&per_page=6`
     )
       .then((response) => {
@@ -38,20 +39,6 @@ export function AllPost() {
 
   return (
     <div className="mt-[100px] ">
-      {/* <div className="text-2xl md:block w-[768px] text-[#181A2A] font-bold">
-        All Blog Post
-      </div>
-      <div className="mt-[32px] justify-between hidden md:flex">
-        <div className="flex gap-4">
-          <button className="text-[#D4A373] text-base">All</button>
-          <button className="text-base text-[#495057]">Design</button>
-          <button className="text-base text-[#495057]">Travel</button>
-          <button className="text-base text-[#495057]">Fashion</button>
-          <button className="text-base text-[#495057]">Technology</button>
-          <button className="text-base text-[#495057]">Branding</button>
-        </div>
-        <button className="text-base text-[#495057]">View All</button>
-      </div> */}
       <Select />
       <div className="container mx-auto mt-[32px] ">
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
