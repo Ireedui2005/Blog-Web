@@ -1,7 +1,6 @@
-import { AllPost } from "@/Components/AllPost";
-import { Banner } from "@/Components/Banner";
-import { TrendingList } from "@/Components/treding/TrendingList";
-
+import { AllPost } from "../components/AllPost";
+import { Banner } from "../components/Banner";
+import { TrendingList } from "../components/treding/TrendingList";
 
 export default function Home() {
   return (
