@@ -1,5 +1,4 @@
 import Image from "next/image";
-import bannerImg from "../public/images/Moskow.png";
 import { loremText } from "@/mock/blog";
 
 export function Blog({ title, date, author }) {
@@ -15,7 +14,12 @@ export function Blog({ title, date, author }) {
           {date}
         </div>
       </div>
-      <Image src={bannerImg} className="mt-[32px] object-cover w-full" />
+      <Image
+        src="/images/Moskow.png"
+        width={800}
+        height={460}
+        className="mt-[32px] object-cover w-full"
+      />
       <div className="mt-[32px] text-xl text-[#3B3C4A]  font-light">
         {loremText}
       </div>
