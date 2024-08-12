@@ -1,5 +1,3 @@
-import { Input } from "postcss";
-
 export function Contact() {
   return (
     <div className="w-[895px] h-[895px] mx-auto">

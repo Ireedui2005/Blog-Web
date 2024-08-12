@@ -1,7 +1,7 @@
-import { TrendingItem } from "./TrendingItem";
 import { mockTrendingData } from "@/mock/trending";
+import { TrendingItem } from "./TrendingItem";
 
-export const TrendingList = () => {
+export function TrendingList() {
   return (
     <div className="mt-[100px] ">
       <div className="text-2xl hidden md:flex text-[#181A2A] font-bold">

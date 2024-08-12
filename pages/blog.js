@@ -11,5 +11,4 @@ const BlogPage = () => {
     </main>
   );
 };
-
 export default BlogPage;
