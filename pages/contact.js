@@ -1,5 +1,4 @@
-import { Contact } from "../components/Contact";
-import React from "react";
+import { Contact } from "@/components/Contact";
 
 export function ContactPage() {
   return (

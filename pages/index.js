@@ -1,6 +1,6 @@
-import { AllPost } from "../components/AllPost";
-import { Banner } from "../components/Banner";
-import { TrendingList } from "../components/treding/TrendingList";
+import { AllPost } from "@/components/AllPost";
+import { Banner } from "@/components/Banner";
+import { TrendingList } from "@/components/treding/TrendingList";
 
 export default function Home() {
   return (
@@ -8,9 +8,6 @@ export default function Home() {
       <Banner />
       <TrendingList />
       <AllPost />
-      {/* <Contact /> */}
-      {/* <NotFound /> */}
-      {/* <MobileVersion /> */}
     </main>
   );
 }
